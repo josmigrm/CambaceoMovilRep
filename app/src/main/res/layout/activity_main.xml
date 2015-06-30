@@ -1,0 +1,142 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+
+    <GridLayout
+        android:columnCount="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@string/lbl_plaza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Spinner
+           android:id="@+id/spinPlaza"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="@string/lbl_municipio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:id="@+id/spinMpo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="@string/lbl_colonia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:id="@+id/spinColonia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_enviar"
+            android:id="@+id/button"
+            android:layout_gravity="center_horizontal"
+            android:onClick="enviarRequest" />
+    </GridLayout>
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextFilter"
+        android:layout_gravity="center_horizontal"
+        android:hint="@string/edit_text_hint"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <GridLayout android:columnCount="5" android:rowCount="1"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp">
+            <TextView
+                android:layout_width="@dimen/cell_domicilio_width"
+                android:text="@string/lbl_numext"
+                android:padding="5dp"/>
+            <TextView
+                android:layout_width="@dimen/cell_domicilio_width"
+                android:text="@string/lbl_numint"
+                android:padding="5dp"/>
+            <TextView
+                android:layout_width="@dimen/cell_domicilio_width"
+                android:text="@string/lbl_edificio"
+                android:padding="5dp"/>
+            <TextView
+                android:layout_width="@dimen/cell_domicilio_width"
+                android:text="@string/lbl_departamento"
+                android:padding="5dp"/>
+            <TextView
+                android:layout_width="@dimen/cell_domicilio_width"
+                android:text="@string/lbl_orientacion"
+                android:padding="5dp"/>
+            <TextView
+                android:layout_width="@dimen/cell_domicilio_width"
+                android:text="@string/lbl_account_No"
+                android:padding="5dp"/>
+            <TextView
+                android:layout_width="@dimen/cell_domicilio_width"
+                android:text="@string/lbl_estatus"
+                android:padding="5dp"/>
+            <TextView
+                android:layout_width="@dimen/cell_domicilio_width"
+                android:text="@string/lbl_factivacion"
+                android:padding="5dp"/>
+            <TextView
+                android:layout_width="@dimen/cell_domicilio_width"
+                android:text="@string/lbl_fsuspension"
+                android:padding="5dp"/>
+            <TextView
+                android:layout_width="@dimen/cell_domicilio_width"
+                android:text="@string/lbl_fcancelacion"
+                android:padding="5dp"/>
+            <TextView
+                android:layout_width="@dimen/cell_domicilio_width"
+                android:text="@string/lbl_ofertacomer"
+                android:padding="5dp"/>
+            <TextView
+                android:layout_width="@dimen/cell_domicilio_width"
+                android:text="@string/lbl_convetidor"
+                android:padding="5dp"/>
+            <TextView
+                android:layout_width="@dimen/cell_domicilio_width"
+                android:text="@string/lbl_mta"
+                android:padding="5dp"/>
+            <TextView
+                android:layout_width="@dimen/cell_domicilio_width"
+                android:text="@string/lbl_cm"
+                android:padding="5dp"/>
+            <TextView
+                android:layout_width="@dimen/cell_domicilio_width"
+                android:text="@string/lbl_saldoTotal"
+                android:padding="5dp"/>
+            <TextView
+                android:layout_width="@dimen/cell_domicilio_width"
+                android:text="@string/lbl_saldoIncobrable"
+                android:padding="5dp"/>
+        </GridLayout>
+
+        <ListView
+            android:scrollbars="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/adressListView"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+</LinearLayout>
