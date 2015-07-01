@@ -5,6 +5,7 @@
     <string name="edit_text_hint">Teclee un valor</string>
     <string name="lbl_enviar">Enviar</string>
     <string name="title_activity_display_message">Detalle del domicilio</string>
+    <string name="title_activity_login">Login</string>
 
     <string name="lbl_plaza">Plaza</string>
     <string name="lbl_municipio">Municipio</string>
@@ -14,7 +15,7 @@
     <string name="lbl_numint">Num. Int.</string>
     <string name="lbl_edificio">Edificio</string>
     <string name="lbl_departamento">Depto.</string>
-    <string name="lbl_orientacion">Orientació</string>
+    <string name="lbl_orientacion">Orientación</string>
     <string name="lbl_account_No">Num. Cta.</string>
     <string name="lbl_estatus">Estatus</string>
     <string name="lbl_factivacion">F. Activación</string>
@@ -26,5 +27,9 @@
     <string name="lbl_cm">Cable Modem</string>
     <string name="lbl_saldoTotal">Saldo Total</string>
     <string name="lbl_saldoIncobrable">Saldo Incobrable</string>
+
+    <string name="lbl_password">Password</string>
+    <string name="lbl_usuario">Usuario</string>
+    <string name="lbl_login">Login</string>
 
 </resources>

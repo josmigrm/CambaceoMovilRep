@@ -2,18 +2,25 @@
 <items version="2" >
 
     <item
-        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/CambaceoMovil/volley/unspecified/jars/classes.jar"
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.5.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="3ebea5e175f9be0e2b6acacb682ea5e8d9824e64">
-        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-f4235a6cf2d409ee441cce76fd526d1abbf5a089.jar" />
+        sha1="d405025c600055237c171a0bbabaa49d69696573">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-cb3c95b0b691f78ce8728e1f06a7b34b8bf2563f.jar" />
     </item>
     <item
-        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.5.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-666e023abce1777aa0ea0fa3cc6ea5e2d119fcec.jar" />
+        sha1="ba207be21987c11b37d9f8faa08ed6e722569f30">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-65694649ccaebfafe16a107de1a45e32b5a44bd4.jar" />
+    </item>
+    <item
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a1372c17fccacca753d3951d3ad820571cbce075">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-ab7bc79972a2a55dfcfaa1d4e1a3e90be4dec70c.jar" />
     </item>
     <item
         jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
@@ -23,11 +30,158 @@
         <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-7af66dbcd12b2fb559f6fba27d4f57c3af67ee7c.jar" />
     </item>
     <item
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e7b35244f50663b3f8d150714bca9ecd7a290da1">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-ff2a12cd4c95a18664045dd98cd4ab5ba71f5972.jar" />
+    </item>
+    <item
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="272bc5d7063f24bc3a33ea1d318cde8f31f5ec4c">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-5237b67a197ef57263dd0ff1c867916702b1d6ba.jar" />
+    </item>
+    <item
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="02bac2dc792d78241077861566f2c82da955e7fa">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-f04812290ea8c863c2e9fa4157346fda79e44269.jar" />
+    </item>
+    <item
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6836d188602ec5382d1967c58b00960eb8ff8773">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-a352c0b40ecc4a671695ec9d6b4ffd4cf06cac4a.jar" />
+    </item>
+    <item
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-597dd061fe5a1ef779dd0eae65fe6f272a97b9cc.jar" />
+    </item>
+    <item
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-666e023abce1777aa0ea0fa3cc6ea5e2d119fcec.jar" />
+    </item>
+    <item
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="68c140702c7242d914655bcb3164d9e8c45b84cb">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-f87a62384083dcad949fca3f0f22eb91b9ddff02.jar" />
+    </item>
+    <item
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1a6411087ab88ce5542f593e63a2752b6b0d6f1a">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-365a967c94ca572fe4434e085bccc0b5c2a9be2e.jar" />
+    </item>
+    <item
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f02127a85abd52a2cd526d4c2409f21969f80ee8">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-9f6995928038260d2c3069394ca86e9da14e448d.jar" />
+    </item>
+    <item
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a172852a35ff919e85b9b7f14bbc15c5bee25520">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-6af28f81f692b0ee6cf4ea7803f02d2e54e2bf84.jar" />
+    </item>
+    <item
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/jars/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ba3df4eb0a630d7de294f0e48d3f9267d279b784">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-24d393a5a8f82c3f74545658a8047c4e69d9fc85.jar" />
+    </item>
+    <item
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-78521034a20151924229115153e5d92744cffbd9.jar" />
+    </item>
+    <item
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="29ebc7e04d877062317c8cc0e68b20f0c1fcda66">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-e23d2ee896309cd1b2643b42d83cba47305efcc8.jar" />
+    </item>
+    <item
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a78183f30e769a98ab4820794f597763088d3065">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-7c81cccea17b1a060287d42a8a6f5ce1262c9c1d.jar" />
+    </item>
+    <item
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f44d03c138cb6488fdbaa65e3a7e5878861a56d8">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-3d88406769c2d1305c096732bcd32ddc5b571a14.jar" />
+    </item>
+    <item
         jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
         <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-63e94ea0051ed351b4bba579dc6a8087bef43b29.jar" />
+    </item>
+    <item
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/CambaceoMovil/volley/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3ebea5e175f9be0e2b6acacb682ea5e8d9824e64">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-f4235a6cf2d409ee441cce76fd526d1abbf5a089.jar" />
+    </item>
+    <item
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-27cb74fcbefff84322828324326ae68d2e958974.jar" />
+    </item>
+    <item
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-11f5315a2eb3df4d9d46b907999a4db44ddadc4d.jar" />
+    </item>
+    <item
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6440e5e5cfe368f9bff3c537fb8988048069cb33">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-7037bc63293de3286dff74332c8081b2b134443f.jar" />
+    </item>
+    <item
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="63ec6e9f4fe5482a7447d0f3091b8e543a02554c">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-c09743d6fd7585e9a8feb03aa79186b7f01d0feb.jar" />
+    </item>
+    <item
+        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8e3a972f28b8bae817e382257ba177a31bcadbbc">
+        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/build/intermediates/pre-dexed/debug/classes-08329fedd99a1723cc08c12ce5bcd0c617efcb55.jar" />
     </item>
     <item
         jar="/Users/Mike/Documents/Desarrollo/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
