@@ -18,10 +18,10 @@ import android.widget.Toast;
 import android.app.AlertDialog;
 
 public class LoginActivity extends Activity implements View.OnClickListener {
-    String IP="192.168.100.6";
-    String PUERTO="9090";
+    String IP="192.168.100.5";
+    String PUERTO="8080";
     final String url ="http://"+IP+":"+PUERTO+"/RESTfulExample/rest/CambaceoMovil/login?user=";
-    String resultRequest = "false";
+
     Button bLogin;
     EditText etUsername, etPassword;
 
@@ -43,13 +43,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         }
     }
 
-    public String getResultRequest() {
-        return resultRequest;
-    }
 
-    public void setResultRequest(String resultRequest) {
-        this.resultRequest = resultRequest;
-    }
 
     private void authenticateUser() {
         RequestQueue queue = Volley.newRequestQueue(this);
@@ -61,7 +55,20 @@ public class LoginActivity extends Activity implements View.OnClickListener {
             new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
-                    setResultRequest(response);
+                    if(response.equals("true")){
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        startActivity(intent);
+                    } else if(response.equals("false")){
+                        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(LoginActivity.this);
+                        dialogBuilder.setMessage("Error del sistema intente en un momento");
+                        dialogBuilder.setPositiveButton("Ok", null);
+                        dialogBuilder.show();
+                    } else {
+                        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(LoginActivity.this);
+                        dialogBuilder.setMessage(response);
+                        dialogBuilder.setPositiveButton("Ok", null);
+                        dialogBuilder.show();
+                    }
                 }
             }, new Response.ErrorListener() {
                 @Override
@@ -71,21 +78,6 @@ public class LoginActivity extends Activity implements View.OnClickListener {
             }
         );
         queue.add(stringRequest);
-
-        if(resultRequest.equals("true")){
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-        } else if(resultRequest.equals("false")){
-            AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
-            dialogBuilder.setMessage("Error del sistema intente en un momento");
-            dialogBuilder.setPositiveButton("Ok", null);
-            dialogBuilder.show();
-        } else {
-            AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
-            dialogBuilder.setMessage(getResultRequest());
-            dialogBuilder.setPositiveButton("Ok", null);
-            dialogBuilder.show();
-        }
 
     }
 

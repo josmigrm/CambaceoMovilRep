@@ -1,125 +1,154 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:columnCount="2"
     tools:context="com.cablevision.cambaceomovil.DetalleDomicilioActivity">
 
-    <GridLayout android:columnCount="2"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent">
         <TextView
+            style="@style/LabelText"
             android:text="@string/lbl_numext"
             android:padding="5dp"/>
-        <TextView
+        <EditText
+            style="@style/InfoText"
             android:id="@+id/detNumExt"
             android:padding="5dp"/>
 
         <TextView
+            style="@style/LabelText"
             android:text="@string/lbl_numint"
             android:padding="5dp"/>
-        <TextView
+        <EditText
+            style="@style/InfoText"
             android:id="@+id/detNumInt"
             android:padding="5dp"/>
 
         <TextView
+            style="@style/LabelText"
             android:text="@string/lbl_edificio"
             android:padding="5dp"/>
-        <TextView
+        <EditText
+            style="@style/InfoText"
             android:id="@+id/detEdificio"
             android:padding="5dp"/>
 
         <TextView
+            style="@style/LabelText"
             android:text="@string/lbl_departamento"
             android:padding="5dp"/>
-        <TextView
+        <EditText
+            style="@style/InfoText"
             android:id="@+id/detDepto"
             android:padding="5dp"/>
 
         <TextView
+            style="@style/LabelText"
             android:text="@string/lbl_orientacion"
             android:padding="5dp"/>
-        <TextView
+        <EditText
+            style="@style/InfoText"
             android:id="@+id/detOrientacion"
             android:padding="5dp"/>
 
         <TextView
+            style="@style/LabelText"
             android:text="@string/lbl_account_No"
             android:padding="5dp"/>
-        <TextView
+        <EditText
+            style="@style/InfoText"
             android:id="@+id/detAccNum"
             android:padding="5dp"/>
 
         <TextView
+            style="@style/LabelText"
             android:text="@string/lbl_estatus"
             android:padding="5dp"/>
-        <TextView
+        <EditText
+            style="@style/InfoText"
             android:id="@+id/detEstatus"
             android:padding="5dp"/>
 
         <TextView
+            style="@style/LabelText"
             android:text="@string/lbl_factivacion"
             android:padding="5dp"/>
-        <TextView
+        <EditText
+            style="@style/InfoText"
             android:id="@+id/detFActivacion"
             android:padding="5dp"/>
 
         <TextView
+            style="@style/LabelText"
             android:text="@string/lbl_fsuspension"
             android:padding="5dp"/>
-        <TextView
+        <EditText
+            style="@style/InfoText"
             android:id="@+id/detFSuspension"
             android:padding="5dp"/>
 
         <TextView
+            style="@style/LabelText"
             android:text="@string/lbl_fcancelacion"
             android:padding="5dp"/>
-        <TextView
+        <EditText
+            style="@style/InfoText"
             android:id="@+id/detFCancelacion"
             android:padding="5dp"/>
 
         <TextView
+            style="@style/LabelText"
             android:text="@string/lbl_ofertacomer"
             android:padding="5dp"/>
-        <TextView
+        <EditText
+            style="@style/InfoText"
             android:id="@+id/detOfertaComer"
             android:padding="5dp"/>
 
         <TextView
+            style="@style/LabelText"
             android:text="@string/lbl_convetidor"
             android:padding="5dp"/>
-        <TextView
+        <EditText
+            style="@style/InfoText"
             android:id="@+id/detConvertidor"
             android:padding="5dp"/>
 
         <TextView
+            style="@style/LabelText"
             android:text="@string/lbl_mta"
             android:padding="5dp"/>
-        <TextView
+        <EditText
+            style="@style/InfoText"
             android:id="@+id/detMta"
             android:padding="5dp"/>
 
         <TextView
+            style="@style/LabelText"
             android:text="@string/lbl_cm"
             android:padding="5dp"/>
-        <TextView
+        <EditText
+            style="@style/InfoText"
             android:id="@+id/detCm"
             android:padding="5dp"/>
 
         <TextView
+            style="@style/LabelText"
             android:text="@string/lbl_saldoTotal"
             android:padding="5dp"/>
-        <TextView
+        <EditText
+            style="@style/InfoText"
             android:id="@+id/detSaldoTotal"
             android:padding="5dp"/>
 
         <TextView
+            style="@style/LabelText"
             android:text="@string/lbl_saldoIncobrable"
             android:padding="5dp"/>
-        <TextView
+        <EditText
+            style="@style/InfoText"
             android:id="@+id/detSaldoIncobrable"
             android:padding="5dp"/>
-    </GridLayout>
-
-</LinearLayout>
+</GridLayout>
