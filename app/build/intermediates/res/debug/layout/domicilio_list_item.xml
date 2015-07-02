@@ -24,4 +24,4 @@
         android:id="@+id/textOrientacion"
         android:padding="5dp"/>
 
-</GridLayout><!-- From: file:/Users/Mike/AndroidStudioProjects/CambaceoMovil/app/src/main/res/layout/domicilio_list_item.xml -->
+</GridLayout><!-- From: file:/Users/Mike/AndroidStudioProjects/CambaceoMovilRep/app/src/main/res/layout/domicilio_list_item.xml -->

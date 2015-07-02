@@ -53,7 +53,7 @@ ADDED from AndroidManifest.xml:11:5
 		ADDED from AndroidManifest.xml:11:22
 application
 ADDED from AndroidManifest.xml:13:5
-MERGED from CambaceoMovil:volley:unspecified:9:5
+MERGED from CambaceoMovilRep:volley:unspecified:9:5
 MERGED from com.android.support:appcompat-v7:22.2.0:22:5
 MERGED from com.android.support:support-v4:22.2.0:22:5
 MERGED from com.google.android.gms:play-services:7.5.0:19:5
@@ -186,7 +186,7 @@ ADDED from AndroidManifest.xml:35:17
 		ADDED from AndroidManifest.xml:35:27
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
-MERGED from CambaceoMovil:volley:unspecified:7:5
+MERGED from CambaceoMovilRep:volley:unspecified:7:5
 MERGED from com.android.support:appcompat-v7:22.2.0:20:5
 MERGED from com.android.support:support-v4:22.2.0:20:5
 MERGED from com.google.android.gms:play-services:7.5.0:18:5

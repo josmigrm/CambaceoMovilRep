@@ -1,8 +1,8 @@
 package com.cablevision.cambaceomovil;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     String url ="http://192.168.100.5:8080/RESTfulExample/rest/json/metallica/get";
     public final static String SELECTED_DOMICILIO = "com.cablevision.cambaceomovil.SELECTED_DOMICILIO";
@@ -101,19 +101,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void addItemsOnSpinners() {
 
-        List<String> listPlazas = new ArrayList<>();
+        List<String> listPlazas = new ArrayList<String>();
         listPlazas.add("Monterrey");
         listPlazas.add("Abasolo");
         listPlazas.add("Allende");
         listPlazas.add("Anahuac");
 
-        List<String>listMpos = new ArrayList<>();
+        List<String>listMpos = new ArrayList<String>();
         listMpos.add("Monterrey");
         listMpos.add("Apodaca");
         listMpos.add("Juarez");
         listMpos.add("García");
 
-        List<String> listCols = new ArrayList<>();
+        List<String> listCols = new ArrayList<String>();
         listCols.add("La Alianza");
         listCols.add("Fundidora");
         listCols.add("Chapultepec");
@@ -123,17 +123,17 @@ public class MainActivity extends AppCompatActivity {
         Spinner mposSpinner = (Spinner)findViewById(R.id.spinMpo);
         Spinner colsSpinner = (Spinner)findViewById(R.id.spinColonia);
 
-        ArrayAdapter<String> plazaAdapter = new ArrayAdapter<>(this,
+        ArrayAdapter<String> plazaAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, listPlazas);
         plazaAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         plazasSpinner.setAdapter(plazaAdapter);
 
-        ArrayAdapter<String> mpoAdapter = new ArrayAdapter<>(this,
+        ArrayAdapter<String> mpoAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, listMpos);
         mpoAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mposSpinner.setAdapter(mpoAdapter);
 
-        ArrayAdapter<String> colsAdapter = new ArrayAdapter<>(this,
+        ArrayAdapter<String> colsAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, listCols);
         colsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         colsSpinner.setAdapter(colsAdapter);
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private ArrayList<Domicilio> parseDomicilioData(String jsonStr){
-        ArrayList<Domicilio> arrayDirecciones = new ArrayList<>();
+        ArrayList<Domicilio> arrayDirecciones = new ArrayList<Domicilio>();
         
         try {
             JSONArray ja = new JSONArray(jsonStr);
