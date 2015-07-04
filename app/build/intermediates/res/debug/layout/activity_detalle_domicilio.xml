@@ -8,7 +8,6 @@
     android:columnCount="2"
     tools:context="com.cablevision.cambaceomovil.DetalleDomicilioActivity">
 
-
         <TextView
             style="@style/LabelText"
             android:text="@string/lbl_numext"
@@ -85,7 +84,7 @@
             style="@style/LabelText"
             android:text="@string/lbl_fsuspension"
             android:padding="5dp"/>
-        <TextView
+        <EditText
             style="@style/InfoText"
             android:id="@+id/detFSuspension"
             android:padding="5dp"/>

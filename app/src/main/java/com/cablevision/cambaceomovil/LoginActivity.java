@@ -81,8 +81,6 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
     }
 
-
-
     private boolean validaCampos(){
         boolean result = true;
         if("".equals(etUsername.getText().toString())){
@@ -95,5 +93,9 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         }
 
         return result;
+    }
+
+    @Override
+    public void onBackPressed() {
     }
 }

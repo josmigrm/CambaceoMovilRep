@@ -20,6 +20,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.cablevision.cambaceomovil.dto.Domicilio;
+import com.cablevision.cambaceomovil.utils.DomicilioItemAdapter;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -37,6 +38,12 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        initView();
+        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(intent);
+    }
+
+    private void initView(){
         setContentView(R.layout.activity_main);
         addItemsOnSpinners();
     }
