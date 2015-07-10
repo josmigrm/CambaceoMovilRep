@@ -8,11 +8,13 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.cablevision.cambaceomovil.dto.Domicilio;
+import com.cablevision.cambaceomovil.utils.UsuarioAlmacenLocal;
 
 
 public class DetalleDomicilioActivity extends Activity {
 
     Domicilio domicilio = new Domicilio();
+    UsuarioAlmacenLocal almacenLocalUsuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,10 @@ public class DetalleDomicilioActivity extends Activity {
         textView = (TextView)findViewById(R.id.detSaldoTotal);
         textView.setText(String.valueOf(domicilio.getSaldo_Total()));
 
+        if(almacenLocalUsuario == null){
+            almacenLocalUsuario = new UsuarioAlmacenLocal(this);
+        }
+
     }
 
     @Override
@@ -70,7 +76,11 @@ public class DetalleDomicilioActivity extends Activity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_logout) {
+            almacenLocalUsuario.clearUserData();
+            almacenLocalUsuario.setUserLoggedIn(false);
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
             return true;
         }
 

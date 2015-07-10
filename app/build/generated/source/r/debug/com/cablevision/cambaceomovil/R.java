@@ -15,12 +15,13 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
         public static final int cell_domicilio_height=0x7f040002;
         public static final int cell_domicilio_width=0x7f040003;
+        public static final int grid_domicilios_header_width=0x7f040004;
     }
     public static final class id {
-        public static final int action_settings=0x7f08001e;
-        public static final int adressListView=0x7f080018;
-        public static final int btnLogin=0x7f080012;
-        public static final int button=0x7f080016;
+        public static final int action_logout=0x7f08002a;
+        public static final int adressListView=0x7f080019;
+        public static final int btnLogin=0x7f080013;
+        public static final int button=0x7f080017;
         public static final int detAccNum=0x7f080005;
         public static final int detCm=0x7f08000d;
         public static final int detConvertidor=0x7f08000b;
@@ -37,17 +38,29 @@ public final class R {
         public static final int detOrientacion=0x7f080004;
         public static final int detSaldoIncobrable=0x7f08000f;
         public static final int detSaldoTotal=0x7f08000e;
-        public static final int editTextFilter=0x7f080017;
-        public static final int etPassword=0x7f080011;
-        public static final int etUsername=0x7f080010;
-        public static final int spinColonia=0x7f080015;
-        public static final int spinMpo=0x7f080014;
-        public static final int spinPlaza=0x7f080013;
-        public static final int textDepto=0x7f08001c;
-        public static final int textEdificio=0x7f08001b;
-        public static final int textNumExt=0x7f080019;
-        public static final int textNumInt=0x7f08001a;
-        public static final int textOrientacion=0x7f08001d;
+        public static final int editTextFilter=0x7f080018;
+        public static final int etPassword=0x7f080012;
+        public static final int etUsername=0x7f080011;
+        public static final int imageView=0x7f080010;
+        public static final int spinColonia=0x7f080016;
+        public static final int spinMpo=0x7f080015;
+        public static final int spinPlaza=0x7f080014;
+        public static final int textAcctNum=0x7f08001f;
+        public static final int textCM=0x7f080027;
+        public static final int textConvertidor=0x7f080025;
+        public static final int textDepto=0x7f08001d;
+        public static final int textEdificio=0x7f08001c;
+        public static final int textEstatus=0x7f080020;
+        public static final int textFActivacion=0x7f080021;
+        public static final int textFCancelacion=0x7f080023;
+        public static final int textFSuspension=0x7f080022;
+        public static final int textMTA=0x7f080026;
+        public static final int textNumExt=0x7f08001a;
+        public static final int textNumInt=0x7f08001b;
+        public static final int textOfertaComer=0x7f080024;
+        public static final int textOrientacion=0x7f08001e;
+        public static final int textSaldoIncobrable=0x7f080029;
+        public static final int textSaldoTotal=0x7f080028;
     }
     public static final class layout {
         public static final int activity_detalle_domicilio=0x7f030000;
@@ -56,15 +69,18 @@ public final class R {
         public static final int domicilio_list_item=0x7f030003;
     }
     public static final class menu {
-        public static final int menu_login=0x7f070000;
-        public static final int menu_main=0x7f070001;
-        public static final int menumensajeresource=0x7f070002;
+        public static final int menumensajeresource=0x7f070000;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f020000;
+        public static final int logo_cablevision_orange=0x7f020001;
+        public static final int logo_cablevision_white=0x7f020002;
+        public static final int logo_cambaceo_horizontal=0x7f020003;
+        public static final int logo_cambaceo_horizontal_white=0x7f020004;
+        public static final int logo_cambaceo_vertical=0x7f020005;
     }
     public static final class string {
-        public static final int action_settings=0x7f050000;
+        public static final int action_logout=0x7f050000;
         public static final int app_name=0x7f050001;
         public static final int edit_text_hint=0x7f050002;
         public static final int lbl_account_No=0x7f050003;
@@ -100,11 +116,12 @@ public final class R {
             backward-compatibility can go here.
         
          */
-        public static final int AppBaseTheme=0x7f060000;
-        /**  All customizations that are NOT specific to a particular API-level can go here. 
-         */
-        public static final int AppTheme=0x7f060001;
-        public static final int InfoText=0x7f060002;
-        public static final int LabelText=0x7f060003;
+        public static final int AppTheme=0x7f060000;
+        public static final int CambaceoActionbarStyle=0x7f060001;
+        public static final int CambaceoActionbarStyle_Text=0x7f060002;
+        public static final int GridHeaderText=0x7f060003;
+        public static final int InfoText=0x7f060004;
+        public static final int LabelText=0x7f060005;
+        public static final int ListItemText=0x7f060006;
     }
 }

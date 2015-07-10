@@ -46,6 +46,18 @@ public class DomicilioItemAdapter extends ArrayAdapter<Domicilio> implements Fil
         ((TextView) rowView.findViewById(R.id.textEdificio)).setText(domicilioListValues.get(position).getEdificio());
         ((TextView) rowView.findViewById(R.id.textDepto)).setText(domicilioListValues.get(position).getDepartamento());
         ((TextView) rowView.findViewById(R.id.textOrientacion)).setText(domicilioListValues.get(position).getOrientacion());
+        ((TextView) rowView.findViewById(R.id.textAcctNum)).setText(domicilioListValues.get(position).getAccont_No());
+        ((TextView) rowView.findViewById(R.id.textEstatus)).setText(domicilioListValues.get(position).getEstatus());
+        ((TextView) rowView.findViewById(R.id.textFActivacion)).setText(domicilioListValues.get(position).getF_Activacion());
+        ((TextView) rowView.findViewById(R.id.textFSuspension)).setText(domicilioListValues.get(position).getF_Suspension());
+        ((TextView) rowView.findViewById(R.id.textFCancelacion)).setText(domicilioListValues.get(position).getF_Cancelacion());
+        ((TextView) rowView.findViewById(R.id.textOfertaComer)).setText(domicilioListValues.get(position).getOferta_Comercial());
+        ((TextView) rowView.findViewById(R.id.textConvertidor)).setText(domicilioListValues.get(position).getConvetidor());
+        ((TextView) rowView.findViewById(R.id.textMTA)).setText(domicilioListValues.get(position).getMTA());
+        ((TextView) rowView.findViewById(R.id.textCM)).setText(domicilioListValues.get(position).getCM());
+        ((TextView) rowView.findViewById(R.id.textSaldoTotal)).setText(String.valueOf(domicilioListValues.get(position).getSaldo_Total()));
+        ((TextView) rowView.findViewById(R.id.textSaldoIncobrable)).setText(String.valueOf(domicilioListValues.get(position).getSaldo_Incobrable()));
+
 
         return rowView;
     }

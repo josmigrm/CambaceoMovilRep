@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Cambaceo Movil</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_logout">Salir</string>
     <string name="edit_text_hint">Teclee un valor</string>
     <string name="lbl_enviar">Enviar</string>
     <string name="title_activity_display_message">Detalle del domicilio</string>

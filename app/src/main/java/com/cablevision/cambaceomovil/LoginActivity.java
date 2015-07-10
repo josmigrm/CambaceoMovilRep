@@ -13,6 +13,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.cablevision.cambaceomovil.dto.Usuario;
+import com.cablevision.cambaceomovil.utils.UsuarioAlmacenLocal;
 
 import android.widget.Toast;
 import android.app.AlertDialog;
@@ -25,6 +27,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     Button bLogin;
     EditText etUsername, etPassword;
 
+    UsuarioAlmacenLocal almacenLocalUsuario;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +38,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         etPassword = (EditText)findViewById(R.id.etPassword);
 
         bLogin.setOnClickListener(this);
+        almacenLocalUsuario = new UsuarioAlmacenLocal(this);
     }
 
     @Override
@@ -44,11 +49,10 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     }
 
 
-
     private void authenticateUser() {
         RequestQueue queue = Volley.newRequestQueue(this);
-        String user = etUsername.getText().toString();
-        String pass = etPassword.getText().toString();
+        final String user = etUsername.getText().toString();
+        final String pass = etPassword.getText().toString();
         String urlFinal= url+user+"&password="+pass;
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, urlFinal,
@@ -56,9 +60,12 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                 @Override
                 public void onResponse(String response) {
                     if(response.equals("true")){
+                        almacenLocalUsuario.storeUserData(new Usuario("Miguel Rubio", user, pass, "78945612"));
+                        almacenLocalUsuario.setUserLoggedIn(true);
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);
                     } else if(response.equals("false")){
+                        almacenLocalUsuario.setUserLoggedIn(false);
                         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(LoginActivity.this);
                         dialogBuilder.setMessage("Error del sistema intente en un momento");
                         dialogBuilder.setPositiveButton("Ok", null);

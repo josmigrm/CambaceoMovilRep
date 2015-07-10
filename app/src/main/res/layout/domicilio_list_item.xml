@@ -3,25 +3,74 @@
     android:orientation="horizontal"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:columnCount="5"
+    android:columnCount="16"
     android:rowCount="1"
-    android:scrollbars="horizontal"
+    android:background="#ffff5621"
     >
 
     <TextView
+        style="@style/ListItemText"
         android:id="@+id/textNumExt"
-        android:padding="5dp"/>
+        />
     <TextView
+        style="@style/ListItemText"
         android:id="@+id/textNumInt"
-        android:padding="5dp"/>
+        />
     <TextView
+        style="@style/ListItemText"
         android:id="@+id/textEdificio"
-        android:padding="5dp"/>
+        />
     <TextView
+        style="@style/ListItemText"
         android:id="@+id/textDepto"
-        android:padding="5dp"/>
+        />
     <TextView
+        style="@style/ListItemText"
         android:id="@+id/textOrientacion"
-        android:padding="5dp"/>
+        />
+    <TextView
+        style="@style/ListItemText"
+        android:id="@+id/textAcctNum"
+        />
+    <TextView
+        style="@style/ListItemText"
+        android:id="@+id/textEstatus"
+        />
+    <TextView
+        style="@style/ListItemText"
+        android:id="@+id/textFActivacion"
+        />
+    <TextView
+        style="@style/ListItemText"
+        android:id="@+id/textFSuspension"
+        />
+    <TextView
+        style="@style/ListItemText"
+        android:id="@+id/textFCancelacion"
+        />
+    <TextView
+        style="@style/ListItemText"
+        android:id="@+id/textOfertaComer"
+        />
+    <TextView
+        style="@style/ListItemText"
+        android:id="@+id/textConvertidor"
+        />
+    <TextView
+        style="@style/ListItemText"
+        android:id="@+id/textMTA"
+        />
+    <TextView
+        style="@style/ListItemText"
+        android:id="@+id/textCM"
+        />
+    <TextView
+        style="@style/ListItemText"
+        android:id="@+id/textSaldoTotal"
+        />
+    <TextView
+        style="@style/ListItemText"
+        android:id="@+id/textSaldoIncobrable"
+        />
 
 </GridLayout>

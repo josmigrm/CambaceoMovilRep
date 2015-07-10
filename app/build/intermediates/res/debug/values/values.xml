@@ -5,10 +5,11 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="cell_domicilio_height">25dp</dimen>
-    <dimen name="cell_domicilio_width">70dp</dimen>
+    <dimen name="cell_domicilio_width">80dp</dimen>
+    <dimen name="grid_domicilios_header_width">84dp</dimen>
     <!-- From: file:/Users/Mike/AndroidStudioProjects/CambaceoMovilRep/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="action_settings">Settings</string>
+    <string name="action_logout">Salir</string>
     <string name="app_name">Cambaceo Movil</string>
     <string name="edit_text_hint">Teclee un valor</string>
     <string name="lbl_account_No">Num. Cta.</string>
@@ -38,15 +39,25 @@
     <string name="title_activity_login">Login</string>
     <!-- From: file:/Users/Mike/AndroidStudioProjects/CambaceoMovilRep/app/src/main/res/values/styles.xml -->
     <eat-comment/>
-    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+    <style name="AppTheme" parent="android:Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/CambaceoActionbarStyle</item>
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
         -->
     </style>
-    <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    <style name="CambaceoActionbarStyle" parent="android:Widget.Holo.ActionBar">
+        <item name="android:background">@mipmap/logo_cambaceo_horizontal_white</item>
+        <item name="android:titleTextStyle">@style/CambaceoActionbarStyle.Text</item>
+    </style>
+    <style name="CambaceoActionbarStyle.Text" parent="android:TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">#00ffffff</item>
+    </style>
+    <style name="GridHeaderText" parent="android:TextAppearance.Holo.Small">
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_width">@dimen/grid_domicilios_header_width</item>
+        <item name="android:singleLine">true</item>
     </style>
     <style name="InfoText" parent="android:TextAppearance.Holo.Widget.EditText">
         <item name="android:textStyle">italic</item>
@@ -55,5 +66,11 @@
     </style>
     <style name="LabelText" parent="android:TextAppearance.Holo.Small">
         <item name="android:textStyle">bold</item>
+    </style>
+    <style name="ListItemText" parent="android:TextAppearance.Holo.Small">
+        <item name="android:background">#ffffffff</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:layout_width">@dimen/cell_domicilio_width</item>
+        <item name="android:layout_height">21dp</item>
     </style>
 </resources>

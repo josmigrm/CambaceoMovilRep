@@ -3,17 +3,20 @@
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
-    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+    <style name="AppTheme" parent="android:Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/CambaceoActionbarStyle</item>
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
         -->
     </style>
-
-    <!-- Application theme. -->
-    <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    <style name="CambaceoActionbarStyle" parent="android:Widget.Holo.ActionBar">
+        <item name="android:background">@mipmap/logo_cambaceo_horizontal_white</item>
+        <item name="android:titleTextStyle">@style/CambaceoActionbarStyle.Text</item>
+    </style>
+    <style name="CambaceoActionbarStyle.Text" parent="android:TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">#00ffffff</item>
     </style>
 
     <style name="LabelText" parent="android:TextAppearance.Holo.Small">
@@ -23,6 +26,17 @@
         <item name="android:textStyle">italic</item>
         <item name="android:editable">false</item>
         <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="ListItemText" parent="android:TextAppearance.Holo.Small">
+        <item name="android:background">#ffffffff</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:layout_width">@dimen/cell_domicilio_width</item>
+        <item name="android:layout_height">21dp</item>
+    </style>
+    <style name="GridHeaderText" parent="android:TextAppearance.Holo.Small">
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_width">@dimen/grid_domicilios_header_width</item>
+        <item name="android:singleLine">true</item>
     </style>
 
 </resources>

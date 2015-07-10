@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -21,6 +23,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.cablevision.cambaceomovil.dto.Domicilio;
 import com.cablevision.cambaceomovil.utils.DomicilioItemAdapter;
+import com.cablevision.cambaceomovil.utils.UsuarioAlmacenLocal;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -34,18 +37,38 @@ public class MainActivity extends Activity {
 
     String url ="http://192.168.100.5:8080/RESTfulExample/rest/json/metallica/get";
     public final static String SELECTED_DOMICILIO = "com.cablevision.cambaceomovil.SELECTED_DOMICILIO";
+    UsuarioAlmacenLocal almacenLocalUsuario;
+    ArrayList<Domicilio> arrayDomicilios;
+    EditText filterText;
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(almacenLocalUsuario == null){
+            almacenLocalUsuario = new UsuarioAlmacenLocal(this);
+        }
+
+        if(almacenLocalUsuario.getLoggedInUser() != null) {
+            initView();
+        } else {
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initView();
-        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-        startActivity(intent);
+        almacenLocalUsuario = new UsuarioAlmacenLocal(this);
+        filterText = (EditText) findViewById(R.id.editTextFilter);
     }
 
     private void initView(){
         setContentView(R.layout.activity_main);
         addItemsOnSpinners();
+        if(arrayDomicilios!=null)
+            renderList();
+
     }
 
     public void enviarRequest(View view) {
@@ -55,8 +78,8 @@ public class MainActivity extends Activity {
             new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
-                    ArrayList<Domicilio> dirs = parseDomicilioData(response);
-                    renderList(dirs);
+                    arrayDomicilios = parseDomicilioData(response);
+                    renderList();
                 }
             }, new Response.ErrorListener() {
                 @Override
@@ -68,9 +91,9 @@ public class MainActivity extends Activity {
         queue.add(stringRequest);
     }
 
-    private void renderList(final ArrayList<Domicilio> doms) {
+    private void renderList() {
         ListView adressListView = (ListView) findViewById(R.id.adressListView);
-        final DomicilioItemAdapter domicilioAdapter = new DomicilioItemAdapter(this,R.layout.domicilio_list_item,doms);
+        final DomicilioItemAdapter domicilioAdapter = new DomicilioItemAdapter(this,R.layout.domicilio_list_item,arrayDomicilios);
         adressListView.setAdapter(domicilioAdapter);
 
         // React to user clicks on item
@@ -79,7 +102,7 @@ public class MainActivity extends Activity {
                                     long id) {
                 //Toast.makeText(MainActivity.this, doms.get(position).toString(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, DetalleDomicilioActivity.class);
-                intent.putExtra(SELECTED_DOMICILIO, doms.get(position));
+                intent.putExtra(SELECTED_DOMICILIO, arrayDomicilios.get(position));
                 startActivity(intent);
             }
         });
@@ -95,7 +118,7 @@ public class MainActivity extends Activity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                System.out.println("Text ["+s+"] - Start ["+start+"] - Before ["+before+"] - Count ["+count+"]");
+                System.out.println("Text [" + s + "] - Start [" + start + "] - Before [" + before + "] - Count [" + count + "]");
                 domicilioAdapter.getFilter().filter(s.toString());
             }
 
@@ -183,4 +206,37 @@ public class MainActivity extends Activity {
         }
         return arrayDirecciones;
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menumensajeresource, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_logout) {
+            almacenLocalUsuario.clearUserData();
+            almacenLocalUsuario.setUserLoggedIn(false);
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+
 }
