@@ -20,9 +20,8 @@ import android.widget.Toast;
 import android.app.AlertDialog;
 
 public class LoginActivity extends Activity implements View.OnClickListener {
-    String IP="192.168.100.5";
-    String PUERTO="8080";
-    final String url ="http://"+IP+":"+PUERTO+"/RESTfulExample/rest/CambaceoMovil/login?user=";
+
+    final String urlLogin ="http://josmigrm.site11.com/login.php";
 
     Button bLogin;
     EditText etUsername, etPassword;
@@ -53,18 +52,18 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         RequestQueue queue = Volley.newRequestQueue(this);
         final String user = etUsername.getText().toString();
         final String pass = etPassword.getText().toString();
-        String urlFinal= url+user+"&password="+pass;
+        String urlFinal= urlLogin+"?user="+user+"&password="+pass;
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, urlFinal,
             new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
-                    if(response.equals("true")){
-                        almacenLocalUsuario.storeUserData(new Usuario("Miguel Rubio", user, pass, "78945612"));
+                    if(response.substring(0,12).matches("\\d*")){
+                        almacenLocalUsuario.storeUserData(new Usuario("Miguel Rubio", user, pass, response));
                         almacenLocalUsuario.setUserLoggedIn(true);
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);
-                    } else if(response.equals("false")){
+                    } else if(response.equals("false")) {
                         almacenLocalUsuario.setUserLoggedIn(false);
                         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(LoginActivity.this);
                         dialogBuilder.setMessage("Error del sistema intente en un momento");

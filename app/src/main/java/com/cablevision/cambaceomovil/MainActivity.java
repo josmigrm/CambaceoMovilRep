@@ -22,6 +22,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.cablevision.cambaceomovil.dto.Domicilio;
+import com.cablevision.cambaceomovil.utils.DatabaseCambaceo;
 import com.cablevision.cambaceomovil.utils.DomicilioItemAdapter;
 import com.cablevision.cambaceomovil.utils.UsuarioAlmacenLocal;
 
@@ -33,13 +34,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements AdapterView.OnItemSelectedListener{
 
-    String url ="http://192.168.100.5:8080/RESTfulExample/rest/json/metallica/get";
     public final static String SELECTED_DOMICILIO = "com.cablevision.cambaceomovil.SELECTED_DOMICILIO";
+    String url ="http://192.168.100.5:8080/RESTfulExample/rest/json/metallica/get";
+    String URL_CAT_ENT_FED ="http://josmigrm.site11.com/cambaceo.php";
+    String URL_CAT_PLAZAS ="http://josmigrm.site11.com/consultaPLAZA_CAT.php";
+
+    DatabaseCambaceo dbCambaceo;
     UsuarioAlmacenLocal almacenLocalUsuario;
+
     ArrayList<Domicilio> arrayDomicilios;
+    List<String> listPlazas;
+    List<String> listMpos;
+    List<String> listCols;
+
     EditText filterText;
+    Spinner plazasSpinner;
+    Spinner mposSpinner;
+    Spinner colsSpinner;
 
     @Override
     protected void onStart() {
@@ -61,6 +74,55 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         almacenLocalUsuario = new UsuarioAlmacenLocal(this);
         filterText = (EditText) findViewById(R.id.editTextFilter);
+        syncCatalogos();
+    }
+
+    private void syncCatalogos() {
+        dbCambaceo = new DatabaseCambaceo(this);
+        RequestQueue queue = Volley.newRequestQueue(this);
+
+        if(dbCambaceo.getCatEntFedCount() <= 0) {
+            StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_CAT_ENT_FED,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            try {
+                                dbCambaceo.insertaRegistrosCatEntFed(response);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                                Toast.makeText(MainActivity.this, "Error al cargar los datos: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(MainActivity.this, "Error al cargar los datos: " + error.toString(), Toast.LENGTH_SHORT).show();
+                }
+            });
+            queue.add(stringRequest);
+        }
+
+
+        if(dbCambaceo.getCatPlazasCount() <= 0) {
+            StringRequest stringRequestPlazas = new StringRequest(Request.Method.GET, URL_CAT_PLAZAS,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            try {
+                                dbCambaceo.insertaRegistrosCatPlazas(response);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                                Toast.makeText(MainActivity.this, "Error al cargar los datos: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(MainActivity.this, "Error al cargar los datos: " + error.toString(), Toast.LENGTH_SHORT).show();
+                }
+            });
+            queue.add(stringRequestPlazas);
+        }
     }
 
     private void initView(){
@@ -130,28 +192,16 @@ public class MainActivity extends Activity {
     }
 
     public void addItemsOnSpinners() {
+        dbCambaceo = new DatabaseCambaceo(this);
 
-        List<String> listPlazas = new ArrayList<String>();
-        listPlazas.add("Monterrey");
-        listPlazas.add("Abasolo");
-        listPlazas.add("Allende");
-        listPlazas.add("Anahuac");
+        listPlazas = dbCambaceo.getPlazas();
+        listMpos = dbCambaceo.getMunicipios();
+        listCols = dbCambaceo.getColonias("MONTERREY");
+        //listCols = new ArrayList<String>();
 
-        List<String>listMpos = new ArrayList<String>();
-        listMpos.add("Monterrey");
-        listMpos.add("Apodaca");
-        listMpos.add("Juarez");
-        listMpos.add("García");
-
-        List<String> listCols = new ArrayList<String>();
-        listCols.add("La Alianza");
-        listCols.add("Fundidora");
-        listCols.add("Chapultepec");
-        listCols.add("Brisas");
-
-        Spinner plazasSpinner = (Spinner)findViewById(R.id.spinPlaza);
-        Spinner mposSpinner = (Spinner)findViewById(R.id.spinMpo);
-        Spinner colsSpinner = (Spinner)findViewById(R.id.spinColonia);
+        plazasSpinner = (Spinner)findViewById(R.id.spinPlaza);
+        mposSpinner = (Spinner)findViewById(R.id.spinMpo);
+        colsSpinner = (Spinner)findViewById(R.id.spinColonia);
 
         ArrayAdapter<String> plazaAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, listPlazas);
@@ -168,6 +218,7 @@ public class MainActivity extends Activity {
         colsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         colsSpinner.setAdapter(colsAdapter);
 
+        mposSpinner.setOnItemSelectedListener(this);
 
     }
 
@@ -239,4 +290,19 @@ public class MainActivity extends Activity {
     }
 
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+        listCols = dbCambaceo.getColonias(mposSpinner.getSelectedItem().toString());
+        ArrayAdapter<String> colsAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, listCols);
+        colsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        colsSpinner.setAdapter(colsAdapter);
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 }
