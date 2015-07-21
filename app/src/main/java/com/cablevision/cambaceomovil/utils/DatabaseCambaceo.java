@@ -227,4 +227,37 @@ public final class DatabaseCambaceo extends SQLiteOpenHelper{
 
         return coloniasArr;
     }
+
+    public String getIdPlaza(String nombrePlaza){
+        String  idPlaza = "";
+        String selectQuery = "SELECT "+COLUMN_ID+" FROM " + TABLE_CAT_PLAZAS +
+                " WHERE "+COLUMN_PLAZA+" = '"+ nombrePlaza+"'";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        cursor.moveToFirst();
+        idPlaza = cursor.getString(cursor.getColumnIndex(COLUMN_ID));
+
+        cursor.close();
+        db.close();
+
+        return idPlaza;
+    }
+
+    public String getIdColEntFed(String nombreMunicipio, String nombreColonia){
+        String  idColEntFed = "";
+        String selectQuery = "SELECT "+COLUMN_ID+" FROM " + TABLE_CAT_ENT_FED +
+                " WHERE "+COLUMN_MPO+" = '"+ nombreMunicipio+"'" +
+                " AND "+COLUMN_COL+" = '"+ nombreColonia+"'";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        cursor.moveToFirst();
+        idColEntFed = cursor.getString(cursor.getColumnIndex(COLUMN_ID));
+
+        cursor.close();
+        db.close();
+
+        return idColEntFed;
+    }
 }

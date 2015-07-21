@@ -37,7 +37,7 @@ import java.util.List;
 public class MainActivity extends Activity implements AdapterView.OnItemSelectedListener{
 
     public final static String SELECTED_DOMICILIO = "com.cablevision.cambaceomovil.SELECTED_DOMICILIO";
-    String url ="http://192.168.100.5:8080/RESTfulExample/rest/json/metallica/get";
+    String URL_DOMICILIOS ="http://josmigrm.site11.com/consultaCTES_CAT.php";
     String URL_CAT_ENT_FED ="http://josmigrm.site11.com/cambaceo.php";
     String URL_CAT_PLAZAS ="http://josmigrm.site11.com/consultaPLAZA_CAT.php";
 
@@ -134,8 +134,16 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
     }
 
     public void enviarRequest(View view) {
-        RequestQueue queue = Volley.newRequestQueue(this);
+        String token = almacenLocalUsuario.getLoggedInUser().getSessionToken();
+        String nomMpo = mposSpinner.getSelectedItem().toString();
+        String nomCol = colsSpinner.getSelectedItem().toString();
+        String idDireccion =dbCambaceo.getIdColEntFed(nomMpo, nomCol);
+        String idPlaza = dbCambaceo.getIdPlaza(plazasSpinner.getSelectedItem().toString());
 
+        //String url = URL_DOMICILIOS + "?token="+token+"&plaza="+idPlaza+"&idDireccion="+idDireccion;
+        String url = "http://josmigrm.site11.com/consultaCTES_CAT.php?token=1436466877486&plaza=1-59JX&idDireccion=1@29720565";
+
+        RequestQueue queue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
             new Response.Listener<String>() {
                 @Override
@@ -158,7 +166,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
         final DomicilioItemAdapter domicilioAdapter = new DomicilioItemAdapter(this,R.layout.domicilio_list_item,arrayDomicilios);
         adressListView.setAdapter(domicilioAdapter);
 
-        // React to user clicks on item
+        // Clic Listener para los elementos de la lista
         adressListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parentAdapter, View view, int position,
                                     long id) {
@@ -227,31 +235,37 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
         ArrayList<Domicilio> arrayDirecciones = new ArrayList<Domicilio>();
         
         try {
-            JSONArray ja = new JSONArray(jsonStr);
+            JSONArray ja = null;
 
-            for (int i=0; i<ja.length(); i++){
-                JSONObject child =  ja.getJSONObject(i);
-                Domicilio tempDir = new Domicilio();
-                tempDir.setNum_Ext(child.getString("num_Ext"));
-                tempDir.setNum_Int(child.getString("num_Int"));
-                tempDir.setEdificio(child.getString("edificio"));
-                tempDir.setDepartamento(child.getString("departamento"));
-                tempDir.setOrientacion(child.getString("orientacion"));
-                tempDir.setAccont_No(child.getString("accont_No"));
-                tempDir.setEstatus(child.getString("estatus"));
-                tempDir.setF_Activacion(child.getString("f_Activacion"));
-                tempDir.setF_Suspension(child.getString("f_Suspension"));
-                tempDir.setF_Cancelacion(child.getString("f_Cancelacion"));
-                tempDir.setOferta_Comercial(child.getString("oferta_Comercial"));
-                tempDir.setConvetidor(child.getString("convetidor"));
-                tempDir.setMTA(child.getString("mta"));
-                tempDir.setCM(child.getString("cm"));
-                tempDir.setSaldo_Total(child.getLong("saldo_Total"));
-                tempDir.setSaldo_Incobrable(child.getLong("saldo_Incobrable"));
+            if(!jsonStr.startsWith("null"))
+                ja = new JSONArray(jsonStr);
 
-                arrayDirecciones.add(tempDir);
+            if(ja == null){
+                Toast.makeText(MainActivity.this, "0 Resultados Encontrados", Toast.LENGTH_LONG).show();
+            } else {
+                for (int i = 0; i < ja.length(); i++) {
+                    JSONObject child = ja.getJSONObject(i);
+                    Domicilio tempDir = new Domicilio();
+                    tempDir.setNum_Ext(child.getString("NUM_EXT"));
+                    tempDir.setNum_Int(child.getString("NUM_INT"));
+                    tempDir.setEdificio(child.getString("EDIFICIO"));
+                    tempDir.setDepartamento(child.getString("DEPARTAMENTO"));
+                    tempDir.setOrientacion(child.getString("ORIENTACION"));
+                    tempDir.setAccont_No(child.getString("ACCONT_NO"));
+                    tempDir.setEstatus(child.getString("ESTATUS"));
+                    tempDir.setF_Activacion(child.getString("F_ACTIVACION"));
+                    tempDir.setF_Suspension(child.getString("F_SUSPENSION"));
+                    tempDir.setF_Cancelacion(child.getString("F_CANCELACION"));
+                    tempDir.setOferta_Comercial(child.getString("OFERTA_COMERCIAL"));
+                    tempDir.setConvetidor(child.getString("CONVERTIDOR"));
+                    tempDir.setMTA(child.getString("MTA"));
+                    tempDir.setCM(child.getString("CM"));
+                    tempDir.setSaldo_Total(child.isNull("SALDO_TOTAL")?0:child.getLong("SALDO_TOTAL"));
+                    tempDir.setSaldo_Incobrable(child.isNull("SALDO_INCOBRABLE")?0:child.getLong("SALDO_INCOBRABLE"));
+
+                    arrayDirecciones.add(tempDir);
+                }
             }
-
         } catch (JSONException e) {
             e.printStackTrace();
         }

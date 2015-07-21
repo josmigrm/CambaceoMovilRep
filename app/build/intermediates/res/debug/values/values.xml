@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/Mike/AndroidStudioProjects/CambaceoMovilRep/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/User/StudioProjects/CambaceoMovilRep/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="cell_domicilio_height">25dp</dimen>
     <dimen name="cell_domicilio_width">80dp</dimen>
     <dimen name="grid_domicilios_header_width">84dp</dimen>
-    <!-- From: file:/Users/Mike/AndroidStudioProjects/CambaceoMovilRep/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/User/StudioProjects/CambaceoMovilRep/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_logout">Salir</string>
     <string name="app_name">Cambaceo Movil</string>
@@ -37,7 +37,7 @@
     <string name="lbl_usuario">Usuario</string>
     <string name="title_activity_display_message">Detalle del domicilio</string>
     <string name="title_activity_login">Login</string>
-    <!-- From: file:/Users/Mike/AndroidStudioProjects/CambaceoMovilRep/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/User/StudioProjects/CambaceoMovilRep/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="android:Theme.Holo.Light">
         <item name="android:actionBarStyle">@style/CambaceoActionbarStyle</item>

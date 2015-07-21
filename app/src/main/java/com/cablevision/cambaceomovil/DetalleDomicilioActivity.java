@@ -5,13 +5,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cablevision.cambaceomovil.dto.Domicilio;
 import com.cablevision.cambaceomovil.utils.UsuarioAlmacenLocal;
 
 
-public class DetalleDomicilioActivity extends Activity {
+public class DetalleDomicilioActivity extends Activity implements View.OnClickListener{
 
     Domicilio domicilio = new Domicilio();
     UsuarioAlmacenLocal almacenLocalUsuario;
@@ -55,6 +58,20 @@ public class DetalleDomicilioActivity extends Activity {
         textView = (TextView)findViewById(R.id.detSaldoTotal);
         textView.setText(String.valueOf(domicilio.getSaldo_Total()));
 
+        ImageView imgNegocio = (ImageView) findViewById(R.id.img_negocio);
+        ImageView imgCasa = (ImageView) findViewById(R.id.img_casa);
+        ImageView imgTerreno = (ImageView) findViewById(R.id.img_terreno);
+        ImageView imgAbrio = (ImageView) findViewById(R.id.img_abierto);
+        ImageView imgCerrado = (ImageView) findViewById(R.id.img_cerrado);
+
+        imgNegocio.setOnClickListener(this);
+        imgCasa.setOnClickListener(this);
+        imgTerreno.setOnClickListener(this);
+        imgAbrio.setOnClickListener(this);
+        imgCerrado.setOnClickListener(this);
+
+
+
         if(almacenLocalUsuario == null){
             almacenLocalUsuario = new UsuarioAlmacenLocal(this);
         }
@@ -86,4 +103,47 @@ public class DetalleDomicilioActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.img_negocio:
+                ejecutaEsNegocio();
+                break;
+            case R.id.img_terreno:
+                ejecutaEsTerrenoBaldio();
+                break;
+            case R.id.img_casa:
+                ejecutaEsCasaAbandonada();
+               break;
+            case R.id.img_abierto:
+                ejecutaAbrieron();
+                break;
+            case R.id.img_cerrado:
+                ejecutaCerrado();
+                break;
+        }
+    }
+
+    private void ejecutaCerrado() {
+        Toast.makeText(this, "Clic en: Cerrado", Toast.LENGTH_SHORT).show();
+    }
+
+    private void ejecutaAbrieron() {
+        Toast.makeText(this, "Clic en: Abrieron", Toast.LENGTH_SHORT).show();
+    }
+
+    private void ejecutaEsCasaAbandonada() {
+        Toast.makeText(this, "Clic en: Casa abandonada", Toast.LENGTH_SHORT).show();
+    }
+
+    private void ejecutaEsTerrenoBaldio() {
+        Toast.makeText(this, "Clic en: Terreno Baldio", Toast.LENGTH_SHORT).show();
+    }
+
+    private void ejecutaEsNegocio() {
+        Toast.makeText(this, "Clic en: Negocio", Toast.LENGTH_SHORT).show();
+    }
+    
+    
 }

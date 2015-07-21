@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/Mike/AndroidStudioProjects/CambaceoMovilRep/app/build/intermediates/exploded-aar/CambaceoMovilRep/volley/unspecified/jars/classes.jar"
+        jar="C:\Users\User\StudioProjects\CambaceoMovilRep\app\build\intermediates\exploded-aar\CambaceoMovilRep\volley\unspecified\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="44b24fd043de0e4eff7f073959cf86e39b1f06d8">
-        <dex dex="/Users/Mike/AndroidStudioProjects/CambaceoMovilRep/app/build/intermediates/pre-dexed/debug/classes-6f35c1a20fdb6c546abe55be1020d1e885e65a6d.jar" />
+        sha1="9afe0dfb11e743f39253598712f843a9091bdfbd">
+        <dex dex="C:\Users\User\StudioProjects\CambaceoMovilRep\app\build\intermediates\pre-dexed\debug\classes-981e802b77adc7e56867f03e3c6546b81e61a561.jar" />
     </item>
 
 </items>

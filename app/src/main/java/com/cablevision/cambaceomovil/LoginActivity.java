@@ -58,8 +58,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
             new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
-                    if(response.substring(0,12).matches("\\d*")){
-                        almacenLocalUsuario.storeUserData(new Usuario("Miguel Rubio", user, pass, response));
+                    if(response.substring(0,13).matches("\\d*")){
+                        almacenLocalUsuario.storeUserData(new Usuario("Miguel Rubio", user, pass, response.substring(0,13)));
                         almacenLocalUsuario.setUserLoggedIn(true);
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);
