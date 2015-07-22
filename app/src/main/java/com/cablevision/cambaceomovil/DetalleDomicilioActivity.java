@@ -131,6 +131,9 @@ public class DetalleDomicilioActivity extends Activity implements View.OnClickLi
 
     private void ejecutaAbrieron() {
         Toast.makeText(this, "Clic en: Abrieron", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this,Swipe_Section_Fragments.class);
+        startActivity(intent);
+
     }
 
     private void ejecutaEsCasaAbandonada() {

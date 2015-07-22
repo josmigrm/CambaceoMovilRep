@@ -38,6 +38,10 @@
             android:name="com.cablevision.cambaceomovil.LoginActivity"
             android:label="@string/title_activity_login" >
         </activity>
+        <activity
+            android:name="com.cablevision.cambaceomovil.Swipe_Section_Fragments"
+            android:label="@string/title_activity_swipe__section__fragment" >
+        </activity>
     </application>
 
 </manifest>

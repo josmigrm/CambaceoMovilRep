@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/User/StudioProjects/CambaceoMovilRep/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/angel.balderas.ext/Documents/GitHub/CambaceoMovilRep/app/src/main/res/values/arrays.xml -->
+    <eat-comment/>
+    <array name="imagenes">
+        <item>permanencia</item>
+        <item>promociones</item>
+        <item>Paquetes</item>
+        <item>indiviuales</item>
+        <item>competencia</item>
+    </array>
+    <array name="informacion">
+        <item>Permanencia. Es la primera información que me debe mostrar, la cual consta de la oferta que más se vende y puede pagar el cliente en dicha colonia, esta información debe de tomarse de la aplicación y es alimentada con información que nos proporciona el área de inteligencia de negocios. Se requiere que dicha información pueda ser actualizada cada 3 meses.</item>
+        <item>Promociones. Al seleccionar esta opción la aplicación mostrará una imagen que podrá ser cambiada en cualquier momento, esta imagen nos mostrará las promociones y/o enfoque que el área de mercadotecnia nos indique. </item>
+        <item>Paquetes. En esta opción se mostrarán los productos que el cliente puede contratar dependiendo de las Reglas de Elegibilidad*. Los productos serán desplegados en forma gráfica y podrán ser seleccionados para darle trámite a una posible contratación. </item>
+        <item>Individuales. En esta opción se mostrarán los productos que el cliente puede contratar dependiendo de las Reglas de Elegibilidad*. Los productos serán desplegados en forma gráfica y podrán ser seleccionados para darle trámite a una posible contratación. </item>
+        <item>Después de desplegar toda la información anterior, se deberá tener una opción donde se pueda elegir si se realizó o no contrato en el domicilio</item>
+
+    </array>
+    <!-- From: file:/C:/Users/angel.balderas.ext/Documents/GitHub/CambaceoMovilRep/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="cell_domicilio_height">25dp</dimen>
     <dimen name="cell_domicilio_width">80dp</dimen>
     <dimen name="grid_domicilios_header_width">84dp</dimen>
-    <!-- From: file:/C:/Users/User/StudioProjects/CambaceoMovilRep/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/angel.balderas.ext/Documents/GitHub/CambaceoMovilRep/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_logout">Salir</string>
+    <string name="action_settings">Settings</string>
     <string name="app_name">Cambaceo Movil</string>
     <string name="edit_text_hint">Teclee un valor</string>
+    <string name="hello_world">Hello world!</string>
     <string name="lbl_account_No">Num. Cta.</string>
     <string name="lbl_cm">Cable Modem</string>
     <string name="lbl_colonia">Colonia</string>
@@ -37,7 +56,11 @@
     <string name="lbl_usuario">Usuario</string>
     <string name="title_activity_display_message">Detalle del domicilio</string>
     <string name="title_activity_login">Login</string>
-    <!-- From: file:/C:/Users/User/StudioProjects/CambaceoMovilRep/app/src/main/res/values/styles.xml -->
+    <string name="title_activity_swipe__section__fragment">Swipe_Section_Fragment</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <!-- From: file:/C:/Users/angel.balderas.ext/Documents/GitHub/CambaceoMovilRep/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="android:Theme.Holo.Light">
         <item name="android:actionBarStyle">@style/CambaceoActionbarStyle</item>

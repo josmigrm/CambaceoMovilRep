@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="imagenes">
+        <item>permanencia</item>
+        <item>promociones</item>
+        <item>Paquetes</item>
+        <item>indiviuales</item>
+        <item>competencia</item>
+    </array>
+
+    <array name="informacion">
+        <item>Permanencia. Es la primera información que me debe mostrar, la cual consta de la oferta que más se vende y puede pagar el cliente en dicha colonia, esta información debe de tomarse de la aplicación y es alimentada con información que nos proporciona el área de inteligencia de negocios. Se requiere que dicha información pueda ser actualizada cada 3 meses.</item>
+        <item>Promociones. Al seleccionar esta opción la aplicación mostrará una imagen que podrá ser cambiada en cualquier momento, esta imagen nos mostrará las promociones y/o enfoque que el área de mercadotecnia nos indique. </item>
+        <item>Paquetes. En esta opción se mostrarán los productos que el cliente puede contratar dependiendo de las Reglas de Elegibilidad*. Los productos serán desplegados en forma gráfica y podrán ser seleccionados para darle trámite a una posible contratación. </item>
+        <item>Individuales. En esta opción se mostrarán los productos que el cliente puede contratar dependiendo de las Reglas de Elegibilidad*. Los productos serán desplegados en forma gráfica y podrán ser seleccionados para darle trámite a una posible contratación. </item>
+        <item>Después de desplegar toda la información anterior, se deberá tener una opción donde se pueda elegir si se realizó o no contrato en el domicilio</item>
+
+    </array>
+
+
+
+
+</resources>

@@ -2,11 +2,46 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\User\StudioProjects\CambaceoMovilRep\app\build\intermediates\exploded-aar\CambaceoMovilRep\volley\unspecified\jars\classes.jar"
+        jar="C:\Users\angel.balderas.ext\Documents\GitHub\CambaceoMovilRep\app\build\intermediates\exploded-aar\com.android.support\support-v13\22.2.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="9afe0dfb11e743f39253598712f843a9091bdfbd">
-        <dex dex="C:\Users\User\StudioProjects\CambaceoMovilRep\app\build\intermediates\pre-dexed\debug\classes-981e802b77adc7e56867f03e3c6546b81e61a561.jar" />
+        sha1="9aa93835393824b436f366120c9ba8a0260ce75d">
+        <dex dex="C:\Users\angel.balderas.ext\Documents\GitHub\CambaceoMovilRep\app\build\intermediates\pre-dexed\debug\classes-cb99dfe8cf5087fc9ef9d1fa536a17df13d65203.jar" />
+    </item>
+    <item
+        jar="C:\Users\angel.balderas.ext\Documents\GitHub\CambaceoMovilRep\app\build\intermediates\exploded-aar\com.android.support\support-v13\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="79a5b6d9fbab3b5fb4c6f86a1ed7a17722fd937b">
+        <dex dex="C:\Users\angel.balderas.ext\Documents\GitHub\CambaceoMovilRep\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-618d2c39f4c5e8196990d47a2291ad30c63cd4c9.jar" />
+    </item>
+    <item
+        jar="C:\Users\angel.balderas.ext\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="C:\Users\angel.balderas.ext\Documents\GitHub\CambaceoMovilRep\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-f85c6d5a61b7372a9b9c8cac5acee023acd6f331.jar" />
+    </item>
+    <item
+        jar="C:\Users\angel.balderas.ext\Documents\GitHub\CambaceoMovilRep\app\build\intermediates\exploded-aar\CambaceoMovilRep\volley\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e5bfb3c7485f173c4c0e697e9ed73d90a2047b98">
+        <dex dex="C:\Users\angel.balderas.ext\Documents\GitHub\CambaceoMovilRep\app\build\intermediates\pre-dexed\debug\classes-e699c7ee404c99e2461b1b67918bf49b72d63efb.jar" />
+    </item>
+    <item
+        jar="C:\Users\angel.balderas.ext\Documents\GitHub\CambaceoMovilRep\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="C:\Users\angel.balderas.ext\Documents\GitHub\CambaceoMovilRep\app\build\intermediates\pre-dexed\debug\classes-6c1ab166f51792fa14f5f80f5ae74d911f6f0c6b.jar" />
+    </item>
+    <item
+        jar="C:\Users\angel.balderas.ext\Documents\GitHub\CambaceoMovilRep\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\Users\angel.balderas.ext\Documents\GitHub\CambaceoMovilRep\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-294a64176a29f0416699dde8a0467c6dd31603b6.jar" />
     </item>
 
 </items>

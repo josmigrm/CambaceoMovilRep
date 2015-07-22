@@ -31,5 +31,14 @@
     <string name="lbl_password">Password</string>
     <string name="lbl_usuario">Usuario</string>
     <string name="lbl_login">Login</string>
+    <string name="title_activity_swipe__section__fragment">Swipe_Section_Fragment</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <string name="action_settings">Settings</string>
 
 </resources>
